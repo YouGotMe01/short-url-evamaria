@@ -47,12 +47,15 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/c/GreyMattersBot'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/greymatter_bots')
+            InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilfile'),
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_updates')
             ],[
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+2YaY1CQKOfg3MzQ9'),
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+ah8EK67oTGJmYzVl')
+            ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
-        ]]
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -93,12 +96,15 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/c/GreyMattersBot'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='https://t.me/greymatter_bots')
+            InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilfile'),
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_updates')
             ],[
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+2YaY1CQKOfg3MzQ9'),
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+ah8EK67oTGJmYzVl')
+            ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
-        ]]
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
