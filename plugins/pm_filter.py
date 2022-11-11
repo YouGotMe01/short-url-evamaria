@@ -111,6 +111,13 @@ async def next_page(bot, query):
             InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/How_to_Download_From_Search_Bot/2')
         ]
     )
+    btn.insert(1,
+        [
+            InlineKeyboardButton(f'📟 𝖥𝗂𝗅𝖾𝗌: {len(files)}', 'dupe'),
+            InlineKeyboardButton(f'🎁 𝖳𝗂𝗉𝗌', 'tips'),
+            InlineKeyboardButton(f'📮 𝖨𝗇𝖿𝗈', 'info')
+        ]
+    )
 
     if 0 < offset <= 10:
         off_set = 0
@@ -643,7 +650,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+    elif query.data == 'tips':
+        await query.answer("🔎𝖠𝖲𝖪 𝖶𝖨𝖳𝖧 𝖢𝖮𝖱𝖱𝖤𝖢𝖳 𝖲𝖯𝖤𝖫𝖫𝖨𝖭𝖦\n😤𝖣𝖮𝖭𝖳 𝖠𝖲𝖪 𝖬𝖮𝖵𝖨𝖤𝖲/𝖲𝖤𝖱𝖨𝖤𝖲 𝖳𝖧𝖮𝖲𝖤 𝖠𝖱𝖤 𝖭𝖮𝖳 𝖱𝖤𝖫𝖤𝖠𝖲𝖤𝖣 𝖮𝖭 𝖮𝖳𝖳\n\n🤓𝖥𝖮𝖱 𝖡𝖤𝖳𝖳𝖤𝖱 𝖱𝖤𝖲𝖴𝖫𝖳𝖲:\n✅ 𝐌𝐎𝐕𝐈𝐄𝐍𝐀𝐌𝐄 𝐘𝐄𝐀𝐑 𝐋𝐀𝐍𝐆𝐔𝐀𝐆𝐄\n✅ 𝐒𝐄𝐑𝐈𝐄𝐒𝐍𝐀𝐌𝐄 𝐒𝐄𝐀𝐒𝐎𝐍 𝐄𝐏𝐈𝐒𝐎𝐃𝐄", True)
+    elif query.data == 'reqst1':
+        await query.answer("𝖧𝖾𝗒 𝖡𝗋𝗈 😍\n\n🎯 𝖢𝗅𝗂𝖼𝗄 𝖮𝗇 𝖳𝗁𝖾 𝖡𝗎𝗍𝗍𝗈𝗇 𝖻𝖾𝗅𝗈𝗐 𝖳𝗁𝖾 𝖥𝗂𝗅𝖾𝗌 𝖸𝗈𝗎 𝖶𝖺𝗇𝗍 𝖠𝗇𝖽 𝖲𝗍𝖺𝗋𝗍 𝖳𝗁𝖾 𝖡𝗈𝗍 ⬇️", True)
+    elif query.data == 'info':
+        await query.answer("⚠︎ 𝖨𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇 ⚠︎\n\n𝗜𝗳 𝘆𝗼𝘂 𝗱𝗼 𝗻𝗼𝘁 𝘀𝗲𝗲 𝘁𝗵𝗲 𝗿𝗲𝗾𝘂𝗲𝘀𝘁𝗲𝗱 𝗺𝗼𝘃𝗶𝗲 / 𝘀𝗲𝗿𝗶𝗲𝘀 𝗳𝗶𝗹𝗲, 𝗹𝗼𝗼𝗸 𝗮𝘁 𝘁𝗵𝗲 𝗻𝗲𝘅𝘁 𝗽𝗮𝗴𝗲", True)
+    try: await query.answer('𝖥𝗂𝗅𝖾𝗌 𝖺𝗋𝖾 𝗍𝗁𝖾𝗋𝖾 𝗂𝗇 𝖻𝖾𝗅𝗈𝗐 𝖿𝗂𝗅𝗍𝖾𝗋 𝖡𝗎𝗍𝗍𝗈𝗇𝗌')
+    except: pass
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -696,6 +710,13 @@ async def auto_filter(client, msg, spoll=False):
     btn.insert(0,
         [
             InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/How_to_Download_From_Search_Bot/2')
+        ]
+    )
+    btn.insert(1,
+        [
+            InlineKeyboardButton(f'📟 𝖥𝗂𝗅𝖾𝗌: {len(files)}', 'dupe'),
+            InlineKeyboardButton(f'🎁 𝖳𝗂𝗉𝗌', 'tips'),
+            InlineKeyboardButton(f'📮 𝖨𝗇𝖿𝗈', 'info')
         ]
     )
 
