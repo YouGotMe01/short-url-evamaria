@@ -842,8 +842,10 @@ async def advantage_spell_chok(msg):
           InlineKeyboardButton('🔍ɢᴏᴏɢʟᴇ🔎', url='https://www.google.com/')
           ]]
           
-    await msg.reply("**Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !**", reply_markup=InlineKeyboardMarkup(btn))
-    
+    mere = await msg.reply("**Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !**", reply_markup=InlineKeyboardMarkup(btn))
+    if SELF_DELETE:
+            await asyncio.sleep(SELF_DELETE_SECONDS)
+            await mere.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
