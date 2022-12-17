@@ -130,7 +130,7 @@ async def next_page(bot, query):
             [
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ])
-        btn insert(1,
+        btn.insert(1,
             [InlineKeyboardButton("⏪ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📃 𝗣𝗮𝗴𝗲s {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
