@@ -460,7 +460,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilfile'),
             InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_predvd')
             ],[
-            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+2YaY1CQKOfg3MzQ9'),
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+SPFDC_meLIFhZTZl'),
             InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+ah8EK67oTGJmYzVl')
             ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
