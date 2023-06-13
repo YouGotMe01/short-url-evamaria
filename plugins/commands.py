@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_predvds')
+                InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isai_mini_predvd')
             ],
             [
                 InlineKeyboardButton('♻️ HΞLᎮ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -50,7 +50,7 @@ async def start(client, message):
             InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilrockermini01'),
             InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_predvds')
             ],[
-            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+gxnW6_5VZXswOWQ1'),
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+s418MizmIZtjOTdl'),
             InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+15MvzJmD49g4N2Q1')
             ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
@@ -102,7 +102,7 @@ async def start(client, message):
             InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilrockermini01'),
             InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_predvds')
             ],[
-            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+gxnW6_5VZXswOWQ1'),
+            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+s418MizmIZtjOTdl'),
             InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+15MvzJmD49g4N2Q1')
             ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
