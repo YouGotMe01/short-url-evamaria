@@ -6,8 +6,8 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /Eva
+
 WORKDIR /Eva
-COPY start.sh /start.sh
+COPY . .
 EXPOSE 8080
 CMD ["python3", "bot.py"]
