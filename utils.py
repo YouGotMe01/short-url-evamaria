@@ -28,6 +28,7 @@ BANNED = {}
 SMART_OPEN = '“'
 SMART_CLOSE = '”'
 START_CHAR = ('\'', '"', SMART_OPEN)
+update_list = []
 
 # temp db for banned 
 class temp(object):
@@ -364,6 +365,20 @@ def remove_escapes(text: str) -> str:
         else:
             res += text[counter]
     return res
+
+async def add_chnl_message(item):
+    keywords = ["hq", "predvd", "predvdrip", "hdcam", "hdcamrip", "hdcam-rip"]
+    mov_name = item.lower()
+    index = len(mov_name)
+    for key in keywords:
+        substring_index = mov_name.find(key)
+        if substring_index != -1 and substring_index < index:
+            index = substring_index
+    final = item[:index].strip()
+    if final not in update_list:
+        update_list.append(final)
+        return final
+    return None
 
 
 def humanbytes(size):
