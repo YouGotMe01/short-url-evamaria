@@ -798,6 +798,7 @@ async def auto_filter(client, msg, spoll=False):
             if SELF_DELETE:
                 await asyncio.sleep(SELF_DELETE_SECONDS)
                 await hehe.delete()
+                await message.delete()
 
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
@@ -806,17 +807,20 @@ async def auto_filter(client, msg, spoll=False):
             if SELF_DELETE:
                 await asyncio.sleep(SELF_DELETE_SECONDS)
                 await hmm.delete()
+                await message.delete()
         except Exception as e:
             logger.exception(e)
             fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             if SELF_DELETE:
                 await asyncio.sleep(SELF_DELETE_SECONDS)
                 await fek.delete()
+                await message.delete()
     else:
         fuk = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         if SELF_DELETE:
             await asyncio.sleep(SELF_DELETE_SECONDS)
             await fuk.delete()
+            await message.delete()
 
 async def advantage_spell_chok(msg):
     query = re.sub(
@@ -859,6 +863,7 @@ async def advantage_spell_chok(msg):
         k = await msg.reply("I couldn't find anything related to that. Check your spelling")
         await asyncio.sleep(8)
         await k.delete()
+        await msg.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
@@ -869,6 +874,7 @@ async def advantage_spell_chok(msg):
     if SELF_DELETE:
             await asyncio.sleep(SELF_DELETE_SECONDS)
             await mere.delete()
+            await msg.delete()
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
