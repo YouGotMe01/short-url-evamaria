@@ -366,19 +366,39 @@ def remove_escapes(text: str) -> str:
             res += text[counter]
     return res
 
-async def add_chnl_message(item):
-    keywords = ["hq", "predvd", "predvdrip", "hdcam", "hdcamrip", "hdcam-rip"]
-    mov_name = item.lower()
-    index = len(mov_name)
-    for key in keywords:
-        substring_index = mov_name.find(key)
-        if substring_index != -1 and substring_index < index:
-            index = substring_index
-    final = item[:index].strip()
-    if final not in update_list:
-        update_list.append(final)
-        return final
-    return None
+async def add_chnl_message(file_name):
+    pattern = [
+        (r'^(.*?)\.(\d{4})\..*?(mkv)$'),
+        (r'^(.*?)\s(\d{4})\s.*?(mkv)$')
+    ]
+    
+    for pat in pattern:
+        match = re.match(pat, file_name)
+        if match:
+            movie_name = match.group(1)
+            year = match.group(2) if len(match.groups()) > 1  else None
+            mov_name = file_name.lower()
+            list1 = []
+            language_keywords = ["tamil", "telugu", "malayalam", "kannada", "english", "hindi", "korean", "japanese"]
+            for lang in language_keywords:
+                substring_index = mov_name.find(lang)
+                if substring_index != -1:
+                    capitalized_lang = lang.capitalize()
+                    list1.append(capitalized_lang.strip())
+            if len(list1) >= 1:
+                if (movie_name, list1[0]) in update_list:
+                    return None, None, None
+            else:
+                if (movie_name, 'No Lang') in update_list:
+                    return None, None, None
+            if len(list1) >= 1:
+                update_list.add((movie_name, list1[0]))
+                return movie_name, year, list1
+            else:
+                update_list.add((movie_name, 'No Lang'))
+                return movie_name, year, None
+    else:
+        return None, None, None
 
 
 def humanbytes(size):
