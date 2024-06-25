@@ -46,7 +46,7 @@ async def save_file(media):
             file_size=media.file_size,
             file_type=media.file_type,
             mime_type=media.mime_type,
-            caption=media.caption.html if media.caption else file_name,
+            caption=media.caption if media.caption else file_name,
         )
     except ValidationError:
         logger.exception('Error occurred while saving file in database')
@@ -62,9 +62,9 @@ async def save_file(media):
             return None
         else:
             logger.info(f'{getattr(media, "file_size", "NO_FILE")} is saved to database')
-            caption_text = media.caption.html if media.caption else file_name
+            caption_text = media.caption if media.caption else file_name
             return caption_text
-
+            
 async def get_bad_files(query, file_type=None, filter=False):
     """For given query return (results, next_offset)"""
     query = query.strip()
