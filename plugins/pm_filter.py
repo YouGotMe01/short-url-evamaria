@@ -457,14 +457,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/tamilrockermini01'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_predvds')
+            InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/isaimini_predvds'),
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_daily_update')
             ],[
-            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 1', url='https://t.me/+s418MizmIZtjOTdl'),
-            InlineKeyboardButton('Ⓖ︎Ⓡ︎Ⓞ︎Ⓤ︎Ⓟ︎ 2', url='https://t.me/+15MvzJmD49g4N2Q1')
+            InlineKeyboardButton(']|I{•---» ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜɪɴɢ ɢʀᴏᴜᴘ ʟɪɴᴋs «---•}I|[', url="https://t.me/isaimini_updates/110")
             ],[      
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+            ],[
+            InlineKeyboardButton('✅ 🅓🅞🅝🅐🅣🅔 🅤🅢 ✅', url='https://t.me/isaimini_donation')
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -790,7 +791,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>😻 𝖧𝖾𝗅𝗅𝗈 {message.from_user.mention}\n🔰 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒\n\n</b>♨️ 𝐁𝐫𝐨𝐮𝐠𝐡𝐭 𝐓𝐨 𝐘𝐨𝐮 𝐁𝐲:- <a href=https://t.me/isaimini_updates>❤️ 𝗜𝘀𝗮𝗶𝗺𝗶𝗻𝗶 𝗣𝗿𝗶𝗺𝗲 ❤️</a>"
+        cap = f"<b>😻 𝖧𝖾𝗅𝗅𝗈 {message.from_user.mention}\n🔰 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒\n\n</b>♨️ 𝐁𝐫𝐨𝐮𝐠𝐡𝐭 𝐓𝐨 𝐘𝐨𝐮 𝐁𝐲:- <a href=https://t.me/isaimini_daily_update>❤️ 𝗜𝘀𝗮𝗶𝗺𝗶𝗻𝗶 𝗣𝗿𝗶𝗺𝗲 ❤️</a>"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
