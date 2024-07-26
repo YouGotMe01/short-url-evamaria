@@ -832,8 +832,11 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
-        await asyncio.sleep(8)
+        btn = [[
+            InlineKeyboardButton('🔍ɢᴏᴏɢʟᴇ🔎', url='https://www.google.com/')
+        ]]
+        k = await msg.reply("**Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !**", reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(SELF_DELETE_SECONDS)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -861,8 +864,11 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
+        btn = [[
+            InlineKeyboardButton('🔍ɢᴏᴏɢʟᴇ🔎', url='https://www.google.com/')
+        ]]
+        k = await msg.reply("**Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !**", reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(SELF_DELETE_SECONDS)
         await k.delete()
         await msg.delete()
         return
