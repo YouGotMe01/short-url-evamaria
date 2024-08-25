@@ -677,13 +677,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
 
 async def auto_filter(client, msg, spoll=False):
-   if not spoll:
+    if not spoll:
         if msg.text.startswith("/"):
             return
         message = msg
         settings = await get_settings(message.chat.id)
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
-            await stick.delete()
             return
         if 2 <len(message.text) < 100:
             search = message.text
@@ -707,6 +706,7 @@ async def auto_filter(client, msg, spoll=False):
                     return await advantage_spell_chok(msg)
                 else:
                     return
+                
         else:
             return
     else:
