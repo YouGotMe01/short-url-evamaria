@@ -31,12 +31,12 @@ async def media(bot, message):
             languages_str = " ".join(languages) if languages else None
             mv_naam = mv_naam.replace(".", " ")
             if year.isdigit():
-                caption = f"<b>#PreDvDUpdate:\n\n<blockquote>🧿 <u>𝐍𝐚𝐦𝐞</u> : <code>{mv_naam}</code>\n📆 <u>𝐘𝐞𝐚𝐫</u> : {year}\n"
+                caption = f"<b>#PreDvDUpdate:\n<blockquote>🧿 <u>𝐍𝐚𝐦𝐞</u> : <code>{mv_naam}</code>\n📆 <u>𝐘𝐞𝐚𝐫</u> : {year}\n"
             if languages_str:
-                caption += f"🎙️<u>𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞</u> : {languages_str}</blockquote>\n"
+                caption += f"🎙️<u>𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞</u> : {languages_str}</blockquote>"
             else:
                 caption += f"</blockquote>\n"
-            caption += "\nCopy & Paste In Group To Search\n---»<a href=https://t.me/isaimini_updates/110> ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ʟɪɴᴋs </a>«---</b>"
+            caption += "Copy & Paste In Group To Search\n---»<a href=https://t.me/isaimini_updates/110> ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ʟɪɴᴋs </a>«---</b>"
             await bot.send_message(
                 chat_id=UPDATES_CHNL,
                 text=caption,
