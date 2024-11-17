@@ -186,7 +186,7 @@ async def advantage_spoll_choker(bot, query):
             button = [[
                 InlineKeyboardButton("🔎 Search in Google 🔍", url=f"https://www.google.com/search?q={google_search}")
             ]]
-            k = await query.message.edit(script.I_CUDNT, reply_markup=InlineKeyboardMarkup(button))
+            k = await query.message.edit("**Bro/sis, Check Movie Name In #Google and Try Again ! Still No Results, It's Not Available In Our Database, We will try to upload soon Or Movie's Masterprint Not Released !**", reply_markup=InlineKeyboardMarkup(button))
             await asyncio.sleep(60)
             await k.delete()
 
