@@ -460,7 +460,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/isaimini_predvds'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_daily_update')
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/+QWXsN89I2OlhMDc1')
             ],[
             InlineKeyboardButton(']|I{•---» ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜɪɴɢ ɢʀᴏᴜᴘ ʟɪɴᴋs «---•}I|[', url="https://t.me/movie_request_group_links")
             ],[      
@@ -809,7 +809,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>😻 𝖧𝖾𝗅𝗅𝗈 {message.from_user.mention}\n🔰 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒\n\n</b>♨️ 𝐁𝐫𝐨𝐮𝐠𝐡𝐭 𝐓𝐨 𝐘𝐨𝐮 𝐁𝐲:- <a href=https://t.me/isaimini_daily_update>❤️ 𝗜𝘀𝗮𝗶𝗺𝗶𝗻𝗶 𝗣𝗿𝗶𝗺𝗲 ❤️</a>"
+        cap = f"<b>😻 𝖧𝖾𝗅𝗅𝗈 {message.from_user.mention}\n🔰 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌 𝖠𝗋𝖾 𝖱𝖾𝖺𝖽𝗒\n\n</b>♨️ 𝐁𝐫𝐨𝐮𝐠𝐡𝐭 𝐓𝐨 𝐘𝐨𝐮 𝐁𝐲:- <a href=https://t.me/+QWXsN89I2OlhMDc1>❤️ 𝗜𝘀𝗮𝗶𝗺𝗶𝗻𝗶 𝗣𝗿𝗶𝗺𝗲 ❤️</a>"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
