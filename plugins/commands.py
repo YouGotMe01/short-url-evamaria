@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_daily_update')
+                InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/+QWXsN89I2OlhMDc1')
             ],
             [
                 InlineKeyboardButton('♻️ HΞLᎮ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -48,7 +48,7 @@ async def start(client, message):
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/isaimini_predvds'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_daily_update')
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/+QWXsN89I2OlhMDc1')
             ],[
             InlineKeyboardButton(']|I{•---» ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜɪɴɢ ɢʀᴏᴜᴘ ʟɪɴᴋs «---•}I|[', url="https://t.me/movie_request_group_links")
             ],[      
@@ -99,7 +99,7 @@ async def start(client, message):
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('⭕️ CHΛИИΞL ⭕️', url='https://t.me/isaimini_predvds'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/isaimini_daily_update')
+            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/+QWXsN89I2OlhMDc1')
             ],[
             InlineKeyboardButton(']|I{•---» ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜɪɴɢ ɢʀᴏᴜᴘ ʟɪɴᴋs «---•}I|[', url="https://t.me/movie_request_group_links")
             ],[      
