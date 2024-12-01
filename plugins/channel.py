@@ -36,7 +36,7 @@ async def media(bot, message):
                 caption += f"🎙️<u>𝐋𝐚𝐧𝐠𝐮𝐚𝐠𝐞</u> : {languages_str}</blockquote>"
             else:
                 caption += f"</blockquote>\n"
-            caption += "Copy & Paste In Group To Search\n---»<a href=https://t.me/movie_request_group_links> ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ ʟɪɴᴋs </a>«---</b>"
+            caption += "Copy only Movie Name & Paste In👇\n---»<a href=https://t.me/movie_request_group_links> ᴍᴏᴠɪᴇ sᴇᴀʀᴄʜɪɴɢ ɢʀᴏᴜᴘ ʟɪɴᴋs </a>«---</b>"
             await bot.send_message(
                 chat_id=UPDATES_CHNL,
                 text=caption,
