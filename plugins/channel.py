@@ -24,9 +24,10 @@ async def media(bot, message):
 
     media.file_type = file_type
     media.caption = message.caption
-    text = await save_file(media)
-    if text is not None:
-        mv_naam, year, languages = await add_chnl_message(text)
+    text, dup = await save_file(media)
+    if dup == 1:
+        cap_txt = media.caption if media.caption else media.file_name
+        mv_naam, year, languages = await add_chnl_message(cap_txt)
         if mv_naam is not None:
             languages_str = " ".join(languages) if languages else None
             mv_naam = mv_naam.replace(".", " ")
